@@ -1,0 +1,20 @@
+/* Copyright (C) OnePub IP Pty Ltd - All Rights Reserved
+ * Unauthorized copying of this file, via any medium is strictly prohibited
+ * Proprietary and confidential
+ * Written by Brett Sutton <bsutton@onepub.dev>, Jan 2022
+ */
+
+package au.com.sutton.vaadin.crud;
+
+import au.com.sutton.vaadin.crud.ifc.CrudPanelPair;
+
+public enum CrudDisplayMode
+{
+	HORIZONTAL, VERTICAL;
+
+	CrudPanelPair getSplitPair(String uniqueId, Float initialSplitSize)
+	{
+		return new CrudPanelPairHorizontal(uniqueId, initialSplitSize);
+	}
+
+}
