@@ -96,7 +96,7 @@ public class ExampleParentCrud extends ParentCrudView<ExampleEntity> implements 
 	}
 
 	@Override
-	protected DataProviderIfc<ExampleEntity> getDaoDataProvider()
+	protected DataProviderIfc<ExampleEntity> getDataProvider()
 	{
 		return new ExampleCrudDataProvider<ExampleEntity>(getDao(), this);
 	}

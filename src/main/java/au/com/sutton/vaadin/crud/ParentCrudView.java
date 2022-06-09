@@ -161,7 +161,7 @@ public abstract class ParentCrudView<E extends CrudEntity> extends VLayout
 		gridBuilder.setSingularNone(singularNoun);
 		gridBuilder.setPluralNone(pluralNoun);
 		gridBuilder
-				.setDaoDataProvider(getDaoDataProvider());
+				.setDaoDataProvider(getDataProvider());
 
 		searchableGrid = gridBuilder.build();
 		searchableGrid.setSizeFull();
@@ -174,7 +174,7 @@ public abstract class ParentCrudView<E extends CrudEntity> extends VLayout
 		setSizeFull();
 	}
 
-	protected abstract DataProviderIfc<E> getDaoDataProvider();
+	protected abstract DataProviderIfc<E> getDataProvider();
 
 	boolean inSelectionListener = false;
 
