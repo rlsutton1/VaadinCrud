@@ -59,10 +59,7 @@ public class EditorLayout<E extends CrudEntity> extends VLayout
 		add(body);
 		body.add(new H4(singularNoun));
 		body.add(formHolder);
-	}
 
-	public void showEditor(boolean setFocus)
-	{
 		if (editorContent == null)
 		{
 			editorContent = new VLayout("EditorContent");
@@ -74,6 +71,10 @@ public class EditorLayout<E extends CrudEntity> extends VLayout
 					buttonLayout.enableButtons(true);
 				});
 		}
+	}
+
+	public void showEditor(boolean setFocus)
+	{
 
 		if (!editorShowing)
 		{
